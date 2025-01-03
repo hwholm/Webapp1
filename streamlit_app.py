@@ -1,7 +1,7 @@
 import json
 import requests
 import streamlit as sLit
-from streamlit_drawable_canvas import st_canvas
+from streamlit_drawable_canvas import sLit_canvas
 import pandas as pd
 from PIL import Image
 
@@ -41,7 +41,7 @@ with sLit.container():
         have Advanced knowledge in SQL, Python, C#, and Excel. I have experience in PHP, HTML, CSS
         Java, C++, and Microsoft Suite. """)
 
-        canvas_result = st_canvas(
+        canvas_result = sLit_canvas(
     fill_color="rgba(255, 165, 0, 0.3)",  # Fixed fill color with some opacity
     stroke_width=stroke_width,
     stroke_color=stroke_color,
