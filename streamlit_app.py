@@ -46,9 +46,11 @@ with sLit.container():
      <input type="text" name="name" placeholder="Your name" required>
      <input type="email" name="email" placeholder="Your email" required>
      <textarea name="message" placeholder="Your message here" required></textarea>
-     <button type="submit">Send</button>
+     <button type="submit", class="button-40, role="button">Send</button>
 </form>
 """
+
+
 
 left_column, right_column = sLit.columns(2)
 with left_column:
