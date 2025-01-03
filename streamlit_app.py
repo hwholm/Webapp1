@@ -19,9 +19,9 @@ load_css(css_path)
 
 
 with sLit.container():
-    sLit.title("Hi, I'm Hunter", key="text1")
+    sLit.title("Hi, I'm Hunter")
     sLit.subheader("Recent Computer Science Graduate")
-    sLit.write("Seeking employment in the Software/IT career path")
+    sLit.write("Seeking employment in the Software/IT career path", key="text1")
 
 
 with sLit.container():
