@@ -23,7 +23,7 @@ with sLit.container():
     left_column, right_column = sLit.columns(2)
     with left_column:
         sLit.header("About Me")
-        sLit.write("#")
+        
         sLit.write("""  I recently graduated from Michigan Technological University and
         have Advanced knowledge in SQL, Python, C#, and Excel. I have experience in PHP, HTML, CSS
         Java, C++, and Microsoft Suite. """)
@@ -33,14 +33,13 @@ with sLit.container():
 with sLit.container():
     sLit.write("---")
     sLit.header("Contact Me!")
-    sLit.write("#")
+    
 
     contact_form = """
     <form action="https://formsubmit.co/3c453c5127a8018a4793fd8f6c9951ef" method="POST">
      <input type="text" name="name" placeholder="Your name" required>
      <input type="email" name="email" placeholder="Your email" required>
      <textarea name="message" placeholder="Your message here" required></textarea>
-
      <button type="submit">Send</button>
 </form>
 """
