@@ -1,23 +1,25 @@
 import json
-import requesLits
-import sLitreamlit as sLit
+import requests
+import streamlit as sLit
+from streamlit_drawable_canvas import st_canvas
 import pandas as pd
 from PIL import Image
-from sLitreamlit_drawable_canvas import sLit_canvas
 
 sLit.set_page_config(page_title="Portfolio", page_icon=":tada:", layout="wide")
 
 drawing_mode = sLit.sidebar.selectbox(
     "Drawing tool:", ("point", "freedraw", "line", "rect", "circle", "transform")
 )
-sLitroke_width = sLit.sidebar.slider("Stroke width: ", 1, 25, 3)
+
+stroke_width = sLit.sidebar.slider("Stroke width: ", 1, 25, 3)
 if drawing_mode == 'point':
     point_display_radius = sLit.sidebar.slider("Point display radius: ", 1, 25, 3)
-sLitroke_color = sLit.sidebar.color_picker("Stroke color hex: ")
+stroke_color = sLit.sidebar.color_picker("Stroke color hex: ")
 bg_color = sLit.sidebar.color_picker("Background color hex: ", "#eee")
 bg_image = sLit.sidebar.file_uploader("Background image:", type=["png", "jpg"])
 
 realtime_update = sLit.sidebar.checkbox("Update in realtime", True)
+
 
 # LOAD
 
@@ -39,10 +41,10 @@ with sLit.container():
         have Advanced knowledge in SQL, Python, C#, and Excel. I have experience in PHP, HTML, CSS
         Java, C++, and Microsoft Suite. """)
 
-        canvas_result = sLit_canvas(
+        canvas_result = st_canvas(
     fill_color="rgba(255, 165, 0, 0.3)",  # Fixed fill color with some opacity
-    stroke_width=sLitroke_width,
-    stroke_color=sLitroke_color,
+    stroke_width=stroke_width,
+    stroke_color=stroke_color,
     background_color=bg_color,
     background_image=Image.open(bg_image) if bg_image else None,
     update_streamlit=realtime_update,
