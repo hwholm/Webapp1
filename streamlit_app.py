@@ -1,11 +1,17 @@
 import json
 import requests
 import streamlit as sLit
+import pathlib
 
 
 sLit.set_page_config(page_title="Portfolio", page_icon=":tada:", layout="wide")
 
+def load_css(file_path):
+    with open(file_path) as f:
+        sLit.html(f"<style>{f.read()}</style>")
 
+css_path = pathlib.Path("style.css")
+load_css(css_path)
 
 
 # LOAD
@@ -13,7 +19,7 @@ sLit.set_page_config(page_title="Portfolio", page_icon=":tada:", layout="wide")
 
 
 with sLit.container():
-    sLit.title("Hi, I'm Hunter")
+    sLit.title("Hi, I'm Hunter", key="text1")
     sLit.subheader("Recent Computer Science Graduate")
     sLit.write("Seeking employment in the Software/IT career path")
 
