@@ -13,9 +13,9 @@ sLit.set_page_config(page_title="Portfolio", page_icon=":tada:", layout="wide")
 
 
 with sLit.container():
-    sLit.subheader("Hi, I'm Hunter")
-    sLit.title("Recent Computer Science Graduate")
-    sLit.write("Seeking employment in the Data/Business Analyst career path")
+    sLit.title("Hi, I'm Hunter")
+    sLit.subheader("Recent Computer Science Graduate")
+    sLit.write("Seeking employment in the Software/IT career path")
 
 
 with sLit.container():
@@ -25,8 +25,8 @@ with sLit.container():
         sLit.header("About Me")
         sLit.write("##")
         sLit.write("""I recently graduated from Michigan Technological University and
-                     am pursuing my PL-300 Power Bi Microsoft Certification.
-                     I have advanced knowledge of Excel, SQL, and Python. """)
+        have Advanced knowledge in SQL, Python, C#, and Excel. I have experience in PHP, HTML, CSS
+        Java, C++, and Microsoft Suite. """)
 
    
 #CONTACT
@@ -39,7 +39,7 @@ with sLit.container():
     <form action="https://formsubmit.co/3c453c5127a8018a4793fd8f6c9951ef" method="POST">
      <input type="text" name="name" placeholder="Your name" required>
      <input type="email" name="email" placeholder="Your email" required>
-     <textarea name="message" placeholder="Your message here" required></textarea>
+     <textarea name="message" placeholder="Your message here" required></textarea><\n>
      <button type="submit">Send</button>
 </form>
 """
